@@ -17,7 +17,7 @@ export function SubscribeButtom() {
       signIn('github'); 
       toast.error('Create an account');
       return;
-    }
+    } 
 
     //Verificar para que o usuário não se escreva novamente:
     if(session?.activeSubscription){
