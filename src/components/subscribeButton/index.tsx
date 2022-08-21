@@ -5,11 +5,8 @@ import { getStripeJS } from '../../services/stripe-js';
 import { toast } from 'react-toastify';
 import styles from './styles.module.scss';
 
-interface SubscribeButtonProps {
-  priceId: string
-}
 
-export function SubscribeButton({ priceId } : SubscribeButtonProps) {
+export function SubscribeButtom() {
 
   const { data: session } = useSession();
   const router = useRouter();
@@ -17,10 +14,10 @@ export function SubscribeButton({ priceId } : SubscribeButtonProps) {
   async function handlesubscribe () {
       
     if(!session){
-      // signIn('github'); 
+      signIn('github'); 
       toast.error('Create an account');
       return;
-    }
+    } 
 
     //Verificar para que o usuário não se escreva novamente:
     if(session?.activeSubscription){

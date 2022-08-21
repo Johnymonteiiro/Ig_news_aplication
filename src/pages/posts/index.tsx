@@ -58,7 +58,7 @@ export default function Posts ({ posts }: PostsProps) {
       <main className={styles.container}>
           <div className={styles.posts}>
             {posts.map(post => (
-              <Link href={ isActive ? `/posts/${post.slug}` : `/posts/preview/${post.slug}`} key={post.slug}>
+              <Link  href={ isActive ? `/posts/${post.slug}` : `/posts/preview/${post.slug}`} key={post.slug}>
               <a key={post.slug}>
               <time>{post.updatedAt}</time>
               <strong>{post.title}</strong>
