@@ -95,8 +95,9 @@ export default NextAuth({
 
          return true;
 
-      } catch{
-
+      } catch (error){
+        
+        console.log(error)
         return false;
       }
     },
